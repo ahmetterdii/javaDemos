@@ -1,0 +1,45 @@
+package com.javacourse.project.hibernateAndJpa.DataAccess;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.javacourse.project.hibernateAndJpa.Entities.City;
+//JPA
+public class HibernateCityDal implements ICityDal {
+	
+	private EntityManager entityManager;
+	
+	@Autowired
+	public HibernateCityDal(EntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+//AOP - Aspect Oriented Programming
+	@Override
+	@Transactional
+	public List<City> getAll() {
+		Session session = entityManager.unwrap(Session.class);
+	}
+
+	@Override
+	public void add(City city) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(City city) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(City city) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

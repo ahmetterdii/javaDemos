@@ -1,0 +1,5 @@
+package com.javacourse.project.hibernateAndJpa.DataAccess;
+
+public class HibernateCityDal implements ICityDal {
+	
+}

@@ -1,0 +1,8 @@
+package com.javacourse.springBootDemo.apiDemo;
+
+import org.springframework.web.bind.annotation.RestContoller;
+
+@RestContoller
+public class ProductsController {
+	
+}
